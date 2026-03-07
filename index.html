@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 - Course Home Page - Wilfredo Marapacuto</title>
+    <meta name="description" content="WDD 231 course home page for Wilfredo Marapacuto featuring course work, navigation, and certificate courses.">
+    <meta name="author" content="Wilfredo Marapacuto">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/home.svg" alt="Site Logo" width="512" height="512">
+        <span>Wilfredo Marapacuto</span>
+        <button id="ham-btn" class="hamburger" aria-label="Open navigation menu"></button>
+    </header>
+
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="#">Chamber Project</a></li>
+            <li><a href="#">Final Project</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+
+        <section class="card">
+            <h2>About Me</h2>
+        
+    <p>
+    My name is Wilfredo Marapacuto. I am from Barquisimeto, Venezuela, and I currently live in Utah with my family.
+    In my country, I earned a Bachelor's Degree in Physiotherapy. Although I am not currently practicing in the U.S., I have continued building my professional path through additional training and certifications.
+    </p>
+
+    <ul>
+      <li>Licensed Immigration Consultant (Utah)</li>
+      <li>IRS Tax Preparer</li>
+      <li>Life &amp; Health Insurance Agent</li>
+    </ul>
+
+    <p>
+    These experiences have helped me start a business in Provo. My goal is to earn a bachelor's degree in software development, attend law school, and become a lawyer.
+    </p>
+        </section>
+
+        <section class="card">
+            <h2>Student Photo</h2>
+            <img src="images/profile.jpeg" alt="Photo of Wilfredo Marapacuto" width="300" height="400">
+        </section>
+
+        <section class="card certificate">
+            <h2>Web Certificate Courses</h2>
+
+            <div class="filter-buttons">
+                <button id="all-btn" type="button">All</button>
+                <button id="cse-btn" type="button">CSE</button>
+                <button id="wdd-btn" type="button">WDD</button>
+            </div>
+
+            <p id="course-count"></p>
+            <p id="credit-count"></p>
+
+            <div id="courses-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="https://github.com/Wilfredo-Marapacuto" target="_blank" rel="noopener noreferrer">
+                <img src="images/github.svg" alt="GitHub" width="16" height="16">
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="images/linkedin.svg" alt="LinkedIn" width="16" height="16">
+            </a>
+            <a href="https://www.facebook.com/share/18EHQamdTV/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+                <img src="images/facebook.svg" alt="Facebook" width="16" height="16">
+            </a>
+        </div>
+
+        <p>&copy; <span id="currentyear"></span> Wilfredo Marapacuto - Utah, USA</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

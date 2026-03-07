@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header,
+main,
+nav,
+footer {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    align-items: end;
+    padding: 10px;
+    border-bottom: solid 1px #ddd;
+    column-gap: 8px;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+header span {
+    font-size: 1.2rem;
+    color: #1d3557;
+    font-weight: 700;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #1d3557;
+    cursor: pointer;
+    font-family: Verdana, sans-serif;
+}
+
+.hamburger::before {
+    content: "\2630";
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+}
+
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a {
+    display: block;
+    padding: .8rem 10px;
+    color: #1d3557;
+    text-decoration: none;
+    border-bottom: solid 1px #ddd;
+}
+
+.navigation li.current {
+    background-color: #eee;
+}
+
+.navigation a:hover {
+    background-color: #d9e2ec;
+}
+
+main {
+    padding: 0 10px 20px;
+}
+
+h1 {
+    margin-left: 10px;
+}
+
+.card {
+    background-color: #f4f4f4;
+    margin: 1rem 0;
+    border: solid 1px #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card h2 {
+    margin: 0;
+    padding: .75rem;
+    background-color: #1d3557;
+    color: white;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.card p {
+    padding: 1rem;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-align: justify;
+    max-width: 600px;
+    text-justify: inter-word;
+    text-indent: 2rem;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin: 1rem auto;
+    border-radius: 8px;
+}
+
+.filter-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .75rem;
+    padding: 1rem;
+}
+
+.filter-buttons button {
+    padding: .75rem;
+    border: solid 1px #999;
+    border-radius: 8px;
+    background-color: #d9e2ec;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+#course-count,
+#credit-count {
+    text-align: center;
+    font-weight: 700;
+    padding-top: 0;
+}
+
+#courses-container {
+    display: grid;
+    gap: .75rem;
+    padding: 0 1rem 1rem;
+}
+
+.course-card {
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #d9e2ec;
+    border: solid 1px #bbb;
+    font-weight: 700;
+}
+
+.course-card.completed {
+    background-color: #e9f5db;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 10px 2rem;
+    background-color: #f4f4f4;
+    margin-top: 2rem;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.social img {
+    width: 32px;
+    height: 32px;
+}

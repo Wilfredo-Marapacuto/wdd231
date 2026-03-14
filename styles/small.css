@@ -256,3 +256,9 @@ margin-bottom: 1rem;
 width: 32px;
 
 }
+
+.current a {
+background: #1d3557;
+color: white;
+font-weight: bold;
+}

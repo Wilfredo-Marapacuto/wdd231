@@ -1,0 +1,180 @@
+body {
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+  color: #1d3557;
+}
+
+header,
+nav,
+main,
+footer {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+header {
+  display: grid;
+  grid-template-columns: auto 44px;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand img {
+  width: 36px;
+}
+
+.brand span {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.hamburger {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger::before {
+  content: "☰";
+}
+
+.hamburger.show::before {
+  content: "✖";
+}
+
+.navigation {
+  display: none;
+}
+
+.navigation.show {
+  display: block;
+}
+
+.navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation a {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: #1d3557;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.navigation a:hover {
+  background: #e07a5f;
+  color: white;
+}
+
+.current a {
+  background: #1d3557;
+  color: white;
+  font-weight: bold;
+}
+
+main {
+  padding: 1rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+.view-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .75rem;
+  margin-bottom: 1rem;
+}
+
+.view-buttons button {
+  padding: .8rem;
+  border: none;
+  background: #1d3557;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.view-buttons button:hover {
+  background: #e07a5f;
+}
+
+#members.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.member-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+.member-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: white;
+  padding: 10px;
+}
+
+.member-card h2 {
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+}
+
+.member-card p {
+  margin: .4rem 0;
+  line-height: 1.4;
+}
+
+.member-card a {
+  color: #1d3557;
+  word-break: break-word;
+}
+
+#members.list {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+#members.list .member-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: left;
+  border-radius: 0;
+  padding: 1rem;
+}
+
+#members.list .member-card img {
+  display: none;
+}
+
+footer {
+  margin-top: 2rem;
+  background: #1d3557;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+footer p {
+  margin: .4rem 0;
+}

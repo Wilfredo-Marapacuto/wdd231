@@ -1,0 +1,33 @@
+@media only screen and (min-width: 38rem) {
+  .hamburger {
+    display: none;
+  }
+
+  .navigation {
+    display: block;
+  }
+
+  .navigation ul {
+    display: flex;
+  }
+
+  .navigation li {
+    flex: 1;
+  }
+
+  #members.grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  #members.grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

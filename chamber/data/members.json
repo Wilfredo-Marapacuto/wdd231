@@ -1,0 +1,60 @@
+{
+  "members": [
+    {
+      "name": "WM Servicios Hispanos",
+      "address": "3651 N 100 E SUITE 375, Provo, UT 84604",
+      "phone": "385-416-8236",
+      "website": "https://wmservicioshispanos.com",
+      "image": "images/wm-servicios-hispanos.webp",
+      "membership": 3
+    },
+    {
+      "name": "American Pathway",
+      "address": "200 W Center St, Provo, UT",
+      "phone": "801-555-1002",
+      "website": "https://americanpathway.com",
+      "image": "images/american-pathway.webp",
+      "membership": 2
+    },
+    {
+      "name": "Cardinal Consulting",
+      "address": "75 N Freedom Blvd, Provo, UT",
+      "phone": "801-555-1003",
+      "website": "https://cardinalconsulting.com",
+      "image": "images/cardinal-consulting.webp",
+      "membership": 2
+    },
+    {
+      "name": "Zion's Pathway Services",
+      "address": "300 E University Pkwy, Provo, UT",
+      "phone": "801-555-1004",
+      "website": "https://zionspathwayservices.com",
+      "image": "images/zions-pathway-services.webp",
+      "membership": 3
+    },
+    {
+      "name": "Utah Tax Pro",
+      "address": "450 N State St, Provo, UT",
+      "phone": "801-555-1005",
+      "website": "https://utahtaxpro.com",
+      "image": "images/utah-tax-pro.webp",
+      "membership": 2
+    },
+    {
+      "name": "No More A Stranger Foundation",
+      "address": "120 S 500 W, Provo, UT",
+      "phone": "801-555-1006",
+      "website": "https://nomoreastranger.org",
+      "image": "images/no-more-stranger-foundation.webp",
+      "membership": 300
+    },
+    {
+      "name": "Wasatch Business Services",
+      "address": "600 N Canyon Rd, Provo, UT",
+      "phone": "801-555-1007",
+      "website": "https://wasatchbusinessservices.com",
+      "image": "images/wasatch-business-services.webp",
+      "membership": 4
+    }
+  ]
+}

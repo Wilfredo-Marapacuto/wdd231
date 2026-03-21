@@ -221,7 +221,7 @@ main > h1 {
   display: inline-block;
   padding: 0.85rem 1.4rem;
   background: #e07a5f;
-  color: #1d3557
+  color: #1d3557;
   font-weight: 700;
   border-radius: 999px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -229,6 +229,7 @@ main > h1 {
 
 .cta-button:hover {
   background: #1d3557;
+  color: white;
 }
 
 .home-grid {

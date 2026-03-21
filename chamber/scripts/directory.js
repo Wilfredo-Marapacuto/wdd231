@@ -39,15 +39,16 @@ function displayMembers(members) {
     phone.innerHTML = `<strong>Phone:</strong> ${member.phone}`;
 
     const website = document.createElement('p');
-    website.innerHTML = `<strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a>`;
+    website.innerHTML = `<strong>Website:</strong> <a href="${member.website}" target="_blank" rel="noopener noreferrer">${member.website}</a>`;
 
     const membership = document.createElement('p');
     membership.innerHTML = `<strong>Membership:</strong> ${getMembershipLevel(member.membership)}`;
 
-    card.appendChild(image);
+
     card.appendChild(name);
-    card.appendChild(address);
+    card.appendChild(image);
     card.appendChild(phone);
+    card.appendChild(address);
     card.appendChild(website);
     card.appendChild(membership);
 

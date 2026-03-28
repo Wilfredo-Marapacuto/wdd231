@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced HTML Form</title>
+  <meta name="description" content="Advanced HTML form activity for WDD 231">
+  <meta name="author" content="Wilfredo Marapacuto">
+  <link rel="stylesheet" href="../styles/small.css">
+</head>
+<body>
+  <header>
+    <h1>Advanced HTML Form</h1>
+  </header>
+
+  <main>
+    <form method="get" action="confirmation.html">
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="385-555-1234" required>
+
+        <label for="birthDate">Birth Date</label>
+        <input type="date" id="birthDate" name="birthDate">
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferences</legend>
+
+        <label for="program">Favorite Program Area</label>
+        <select id="program" name="program">
+          <option value="Software Development">Software Development</option>
+          <option value="Web Development">Web Development</option>
+          <option value="Business">Business</option>
+          <option value="Health">Health</option>
+        </select>
+
+        <p>Preferred Study Mode</p>
+        <label>
+          <input type="radio" name="studyMode" value="Online" required>
+          Online
+        </label>
+        <label>
+          <input type="radio" name="studyMode" value="In Person">
+          In Person
+        </label>
+
+        <p>Interests</p>
+        <label>
+          <input type="checkbox" name="interest" value="HTML">
+          HTML
+        </label>
+        <label>
+          <input type="checkbox" name="interest" value="CSS">
+          CSS
+        </label>
+        <label>
+          <input type="checkbox" name="interest" value="JavaScript">
+          JavaScript
+        </label>
+        <label>
+          <input type="checkbox" name="interest" value="Accessibility">
+          Accessibility
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Additional Information</legend>
+
+        <label for="comments">Comments</label>
+        <textarea id="comments" name="comments" rows="5" placeholder="Write your comments here..."></textarea>
+      </fieldset>
+
+      <button type="submit">Submit Form</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Wilfredo Marapacuto</p>
+  </footer>
+</body>
+</html>

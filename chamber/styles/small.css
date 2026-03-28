@@ -352,3 +352,168 @@ footer {
 footer p {
   margin: 0.4rem 0;
 }
+
+.join-layout {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.join-form,
+.membership-cards,
+.thankyou-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #f7f7f7;
+  padding: 1rem;
+}
+
+.join-form h2,
+.membership-cards h2,
+.thankyou-card h2 {
+  margin-bottom: 1rem;
+}
+
+.join-form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.join-form input,
+.join-form select,
+.join-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.35rem;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.join-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.join-form input[type="submit"] {
+  background: #1d3557;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.join-form input[type="submit"]:hover {
+  background: #e07a5f;
+}
+
+.membership-cards {
+  display: grid;
+  gap: 1rem;
+}
+
+.membership-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: white;
+  padding: 1rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.membership-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.membership-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.membership-card:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.membership-card:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+.membership-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.membership-card p {
+  margin-bottom: 0.75rem;
+}
+
+.membership-card a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #e07a5f;
+  color: white;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.membership-card a:hover {
+  background: #1d3557;
+}
+
+dialog {
+  width: 90%;
+  max-width: 500px;
+  border: 1px solid rgb(0 0 0 / 10%);
+  border-radius: 10px;
+  padding: 1.5rem;
+  background: white;
+  box-shadow: 0 0 2rem rgb(0 0 0 / 25%);
+}
+
+dialog::backdrop {
+  background: rgb(0 0 0 / 50%);
+}
+
+dialog h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+dialog ul {
+  padding-left: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+dialog button {
+  padding: 0.6rem 1rem;
+  border: none;
+  background: #1d3557;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+dialog button:hover {
+  background: #e07a5f;
+}
+
+
+.thankyou-card p {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.thankyou-card p:last-child {
+  border-bottom: none;
+}
+
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

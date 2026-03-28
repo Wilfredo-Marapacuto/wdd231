@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Join the Chamber</title>
-  <meta name="description" content="Apply for membership in the Provo Chamber of Commerce.">
+  <title>Join the Provo Chamber of Commerce</title>
+  <meta name="description" content="Apply for membership in the Provo Chamber of Commerce and explore the benefits of each membership level.">
   <meta name="author" content="Wilfredo Marapacuto">
 
   <meta property="og:title" content="Join the Provo Chamber of Commerce">
@@ -23,17 +23,7 @@
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
 
-  <script src="scripts/navigation.js" defer></script>
-  <script src="scripts/dates.js" defer></script>
-
-  <style>
-    @media only screen and (min-width: 38rem) {
-      .join-layout {
-        grid-template-columns: 2fr 1fr;
-        align-items: start;
-      }
-    }
-  </style>
+  <script src="scripts/join.js" defer></script>
 </head>
 <body>
 
@@ -66,6 +56,7 @@
           Applicant First Name
           <input
             type="text"
+            id="firstName"
             name="firstName"
             title="Applicant first name"
             autocomplete="given-name"
@@ -76,6 +67,7 @@
           Applicant Last Name
           <input
             type="text"
+            id="lastName"
             name="lastName"
             title="Applicant last name"
             autocomplete="family-name"
@@ -86,8 +78,9 @@
           Organizational Title
           <input
             type="text"
+            id="orgTitle"
             name="orgTitle"
-            title="Organizational title"
+            title="Use at least 7 letters, spaces, or hyphens only"
             autocomplete="organization-title"
             pattern="[A-Za-z\s-]{7,}"
             placeholder="Operations Manager">
@@ -97,6 +90,7 @@
           Email Address
           <input
             type="email"
+            id="email"
             name="email"
             title="Email address"
             autocomplete="email"
@@ -108,6 +102,7 @@
           Mobile Phone Number
           <input
             type="tel"
+            id="phone"
             name="phone"
             title="Mobile phone number"
             autocomplete="tel"
@@ -118,6 +113,7 @@
           Business / Organization Name
           <input
             type="text"
+            id="organization"
             name="organization"
             title="Business or organization name"
             autocomplete="organization"
@@ -126,7 +122,7 @@
 
         <label>
           Membership Level
-          <select name="membership" title="Membership level" required>
+          <select id="membership" name="membership" title="Membership level" required>
             <option value="">Select a membership</option>
             <option value="np">NP Membership</option>
             <option value="bronze">Bronze Membership</option>
@@ -138,6 +134,7 @@
         <label>
           Business / Organization Description
           <textarea
+            id="description"
             name="description"
             title="Business or organization description"></textarea>
         </label>
@@ -153,25 +150,25 @@
         <div class="membership-card">
           <h3>NP Membership</h3>
           <p>For nonprofit organizations. No membership fee.</p>
-          <a href="#" onclick="document.getElementById('npModal').showModal(); return false;">More Info</a>
+          <a href="#" data-modal="npModal">More Info</a>
         </div>
 
         <div class="membership-card">
           <h3>Bronze Membership</h3>
           <p>Basic visibility and networking opportunities.</p>
-          <a href="#" onclick="document.getElementById('bronzeModal').showModal(); return false;">More Info</a>
+          <a href="#" data-modal="bronzeModal">More Info</a>
         </div>
 
         <div class="membership-card">
           <h3>Silver Membership</h3>
           <p>Enhanced benefits, events, and promotion.</p>
-          <a href="#" onclick="document.getElementById('silverModal').showModal(); return false;">More Info</a>
+          <a href="#" data-modal="silverModal">More Info</a>
         </div>
 
         <div class="membership-card">
           <h3>Gold Membership</h3>
           <p>Premium advertising, events, and spotlight features.</p>
-          <a href="#" onclick="document.getElementById('goldModal').showModal(); return false;">More Info</a>
+          <a href="#" data-modal="goldModal">More Info</a>
         </div>
       </section>
     </div>
@@ -183,7 +180,7 @@
         <li>Access to networking events</li>
         <li>Community involvement opportunities</li>
       </ul>
-      <button type="button" onclick="document.getElementById('npModal').close()">Close</button>
+      <button type="button" class="close-btn">Close</button>
     </dialog>
 
     <dialog id="bronzeModal">
@@ -193,7 +190,7 @@
         <li>Access to chamber events</li>
         <li>Basic promotional opportunities</li>
       </ul>
-      <button type="button" onclick="document.getElementById('bronzeModal').close()">Close</button>
+      <button type="button" class="close-btn">Close</button>
     </dialog>
 
     <dialog id="silverModal">
@@ -203,7 +200,7 @@
         <li>Discounts on events and training</li>
         <li>Additional promotional visibility</li>
       </ul>
-      <button type="button" onclick="document.getElementById('silverModal').close()">Close</button>
+      <button type="button" class="close-btn">Close</button>
     </dialog>
 
     <dialog id="goldModal">
@@ -213,7 +210,7 @@
         <li>Homepage spotlight opportunities</li>
         <li>Featured advertising and premium exposure</li>
       </ul>
-      <button type="button" onclick="document.getElementById('goldModal').close()">Close</button>
+      <button type="button" class="close-btn">Close</button>
     </dialog>
   </main>
 
@@ -230,12 +227,6 @@
       <p id="lastModified"></p>
     </div>
   </footer>
-
-  <script>
-    window.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("timestamp").value = new Date().toISOString();
-    });
-  </script>
 
 </body>
 </html>

@@ -1,41 +1,68 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Thank You</title>
+  <title>Thank You | Provo Chamber of Commerce</title>
+  <meta name="description" content="Thank you for submitting your chamber membership application.">
+  <meta name="author" content="Wilfredo Marapacuto">
 
-<link rel="stylesheet" href="styles/normalize.css">
-<link rel="stylesheet" href="styles/small.css">
-<link rel="stylesheet" href="styles/larger.css">
+  <link rel="icon" href="../favicon.ico">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <script src="scripts/dates.js" defer></script>
+  <script src="scripts/thankyou.js" defer></script>
 </head>
-
 <body>
 
-<main>
+  <header>
+    <div class="brand">
+      <img src="../images/home.svg" alt="Chamber logo">
+      <span>Provo Chamber of Commerce</span>
+    </div>
 
-<h1>Thank You!</h1>
+    <button id="ham-btn" class="hamburger" aria-label="Menu"></button>
+  </header>
 
-<div id="results"></div>
+  <nav id="nav-bar" class="navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li class="current"><a href="join.html">Join</a></li>
+      <li><a href="#">Discover</a></li>
+    </ul>
+  </nav>
 
-</main>
+  <main>
+    <h1>Thank You!</h1>
 
-<script>
+    <section class="thankyou-card">
+      <h2>Your Application Has Been Received</h2>
+      <div id="results"></div>
+    </section>
+  </main>
 
-const params = new URLSearchParams(window.location.search);
+  <footer>
+    <div class="contact">
+      <p><strong>Provo Chamber of Commerce</strong></p>
+      <p>145 Center Street, Provo, UT 84601</p>
+      <p>info@provochamber.org</p>
+      <p>(801) 555-0145</p>
+    </div>
 
-document.getElementById("results").innerHTML = `
-<p><strong>First Name:</strong> ${params.get("firstName")}</p>
-<p><strong>Last Name:</strong> ${params.get("lastName")}</p>
-<p><strong>Email:</strong> ${params.get("email")}</p>
-<p><strong>Phone:</strong> ${params.get("phone")}</p>
-<p><strong>Organization:</strong> ${params.get("organization")}</p>
-<p><strong>Date:</strong> ${params.get("timestamp")}</p>
-`;
-
-</script>
+    <div class="development">
+      <p>Wilfredo Marapacuto | WDD 231 | ©️ <span id="currentyear"></span></p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
 
 </body>
 </html>

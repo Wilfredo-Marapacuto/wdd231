@@ -1,46 +1,45 @@
-/* normalize.css */
 
-/* Box sizing */
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-/* Remove default margins */
+
 body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
   margin: 0;
 }
 
-/* Body defaults */
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Remove list styles */
+
 ul, ol {
   list-style: none;
   padding: 0;
 }
 
-/* Anchor defaults */
+
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Images responsive */
+
 img, picture {
   max-width: 100%;
   display: block;
 }
 
-/* Buttons */
+
 button {
   font: inherit;
   cursor: pointer;
 }
 
-/* Tables */
+
 table {
   border-collapse: collapse;
 }

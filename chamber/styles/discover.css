@@ -1,0 +1,118 @@
+/* VISITOR + INTRO */
+.visit-card,
+.intro-card {
+  margin-bottom: 1rem;
+}
+
+#visit-message {
+  font-weight: 700;
+}
+
+/* GRID PRINCIPAL (MOBILE) */
+#discover-cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "area1"
+    "area2"
+    "area3"
+    "area4"
+    "area5"
+    "area6"
+    "area7"
+    "area8";
+}
+
+/* ÁREAS */
+.area1 { grid-area: area1; }
+.area2 { grid-area: area2; }
+.area3 { grid-area: area3; }
+.area4 { grid-area: area4; }
+.area5 { grid-area: area5; }
+.area6 { grid-area: area6; }
+.area7 { grid-area: area7; }
+.area8 { grid-area: area8; }
+
+/* CARD */
+.discover-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #f7f7f7;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* TITLES */
+.discover-card h2 {
+  margin: 0 0 0.75rem 0;
+}
+
+/* IMAGE */
+.discover-card figure {
+  margin: 0 0 0.75rem 0;
+}
+
+.discover-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+}
+
+/* ADDRESS */
+.discover-card address {
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* TEXT */
+.discover-card p {
+  margin: 0.5rem 0;
+  flex-grow: 1;
+}
+
+/* BUTTON */
+.discover-card button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #1d3557;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.discover-card button:hover {
+  background: #e07a5f;
+  color: #1d3557;
+}
+
+/* TABLET */
+@media only screen and (min-width: 641px) {
+  #discover-cards {
+    grid-template-areas:
+      "area1 area2"
+      "area3 area4"
+      "area5 area6"
+      "area7 area8";
+  }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 1025px) {
+  #discover-cards {
+    grid-template-areas:
+      "area1 area2 area3"
+      "area4 area5 area6"
+      "area7 area8 ."; /* 🔥 FIX: evita que Utah Lake ocupe 2 espacios */
+  }
+
+  .discover-card img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.05);
+    transition: 0.3s;
+  }
+}

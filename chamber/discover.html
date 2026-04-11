@@ -4,14 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Provo Chamber of Commerce Directory</title>
-  <meta name="description" content="Business directory page for the Provo Chamber of Commerce.">
+  <title>Discover | Provo Chamber of Commerce</title>
+  <meta name="description" content="Discover places of interest in Provo, Utah.">
   <meta name="author" content="Wilfredo Marapacuto">
-
-  <meta property="og:title" content="Provo Chamber of Commerce Directory">
-  <meta property="og:description" content="Explore local businesses in the Provo Chamber of Commerce directory.">
-  <meta property="og:image" content="https://wilfredo-marapacuto.github.io/wdd231/chamber/images/wm-servicios-hispanos.webp">
-  <meta property="og:url" content="https://wilfredo-marapacuto.github.io/wdd231/chamber/directory.html">
 
   <link rel="icon" href="../favicon.ico">
 
@@ -22,8 +17,9 @@
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
+  <link rel="stylesheet" href="styles/discover.css">
 
-  <script src="scripts/directory.js" defer></script>
+  <script type="module" src="scripts/discover.js" defer></script>
 </head>
 <body>
 
@@ -39,21 +35,28 @@
   <nav id="nav-bar" class="navigation">
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li class="current"><a href="directory.html">Directory</a></li>
+      <li><a href="directory.html">Directory</a></li>
       <li><a href="join.html">Join</a></li>
-      <li><a href="discover.html">Discover</a></li>
+      <li class="current"><a href="discover.html">Discover</a></li>
     </ul>
   </nav>
 
   <main>
-    <h1>Business Directory</h1>
+    <h1>Discover Provo</h1>
 
-    <div class="view-buttons">
-      <button id="grid">Grid View</button>
-      <button id="list">List View</button>
-    </div>
+    <section class="card visit-card">
+      <h2 class="section-title">Visitor Message</h2>
+      <p id="visit-message"></p>
+    </section>
 
-    <section id="members" class="grid"></section>
+    <section class="card intro-card">
+      <h2 class="section-title">Places of Interest</h2>
+      <p>These are a few interesting places in Provo, Utah, that people can visit and enjoy.</p>
+    </section>
+
+    <!-- 🔥 AQUÍ ESTÁ EL FIX -->
+    <section id="discover-cards" class="places-grid"></section>
+
   </main>
 
   <footer>

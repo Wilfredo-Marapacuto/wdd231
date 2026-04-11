@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1d3557;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+}
+
+section {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, serif;
+}
+
+h2 {
+    color: #1d3557;
+    border-bottom: 3px solid #e9c46a;
+    padding-bottom: 5px;
+}
+
+strong {
+    color: #1d3557;
+}
+
+footer {
+    background-color: #1d3557;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}

@@ -9,19 +9,24 @@ const weatherIcon = document.querySelector("#weather-icon");
 
 const testimonialsContainer = document.querySelector("#testimonials");
 
+// OpenWeatherMap API
 const apiKey = "a6d43ff69ad066b14fb2f04047830d42";
 const lat = 40.2338;
 const lon = -111.6585;
-
 const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
 
+// simple responsive menu
 if (hamButton && navBar) {
   hamButton.addEventListener("click", () => {
-    hamButton.classList.toggle("show");
     navBar.classList.toggle("show");
+    hamButton.classList.toggle("show");
+
+    const expanded = hamButton.classList.contains("show");
+    hamButton.setAttribute("aria-expanded", expanded);
   });
 }
 
+// footer dates
 if (currentYear) {
   currentYear.textContent = new Date().getFullYear();
 }
@@ -30,12 +35,32 @@ if (lastModified) {
   lastModified.textContent = `Last Modified: ${document.lastModified}`;
 }
 
+// make weather words look nicer
+function capitalizeWords(text) {
+  return text.replace(/\b\w/g, (letter) => letter.toUpperCase());
+}
+
+// show weather data
+function displayWeather(data) {
+  if (!currentTemp || !weatherDesc || !weatherIcon) return;
+
+  currentTemp.textContent = `${Math.round(data.main.temp)}°F`;
+  weatherDesc.textContent = capitalizeWords(data.weather[0].description);
+
+  const iconCode = data.weather[0].icon;
+  const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+
+  weatherIcon.setAttribute("src", iconUrl);
+  weatherIcon.setAttribute("alt", data.weather[0].description);
+}
+
+// fetch weather API
 async function getWeather() {
   try {
     const response = await fetch(weatherUrl);
 
     if (!response.ok) {
-      throw new Error("Weather data was not loaded.");
+      throw new Error("Weather data could not be loaded.");
     }
 
     const data = await response.json();
@@ -53,48 +78,11 @@ async function getWeather() {
   }
 }
 
-function displayWeather(data) {
-  if (!currentTemp || !weatherDesc || !weatherIcon) return;
-
-  currentTemp.textContent = `${Math.round(data.main.temp)}°F`;
-  weatherDesc.textContent = capitalizeWords(data.weather[0].description);
-
-  const iconCode = data.weather[0].icon;
-  const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
-
-  weatherIcon.setAttribute("src", iconUrl);
-  weatherIcon.setAttribute("alt", data.weather[0].description);
-}
-
-function capitalizeWords(text) {
-  return text.replace(/\b\w/g, (letter) => letter.toUpperCase());
-}
-
-async function getTestimonials() {
-  try {
-    const response = await fetch("data/testimonials.json");
-
-    if (!response.ok) {
-      throw new Error("Testimonials data was not loaded.");
-    }
-
-    const data = await response.json();
-    displayTestimonials(data);
-  } catch (error) {
-    console.error(error);
-
-    if (testimonialsContainer) {
-      testimonialsContainer.innerHTML = "<p>Testimonials are not available right now.</p>";
-    }
-  }
-}
-
+// show testimonials from local JSON
 function displayTestimonials(testimonials) {
   if (!testimonialsContainer) return;
 
-  const selectedTestimonials = testimonials.slice(0, 3);
-
-  const cards = selectedTestimonials.map((item) => {
+  const cards = testimonials.map((item) => {
     const stars = "★".repeat(item.rating);
 
     return `
@@ -109,6 +97,29 @@ function displayTestimonials(testimonials) {
   }).join("");
 
   testimonialsContainer.innerHTML = cards;
+}
+
+// fetch testimonials JSON
+async function getTestimonials() {
+  try {
+    const response = await fetch("data/testimonials.json");
+
+    if (!response.ok) {
+      throw new Error("Testimonials data could not be loaded.");
+    }
+
+    const data = await response.json();
+
+    // only show first 6 testimonials
+    const selectedTestimonials = data.slice(0, 6);
+    displayTestimonials(selectedTestimonials);
+  } catch (error) {
+    console.error(error);
+
+    if (testimonialsContainer) {
+      testimonialsContainer.innerHTML = "<p>Testimonials are not available right now.</p>";
+    }
+  }
 }
 
 getWeather();

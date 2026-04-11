@@ -9,14 +9,14 @@
   width: 100%;
   height: 420px;
   object-fit: cover;
-  object-position: center 10%;
+  object-position: center 20%;
 }
 
-.hero::after {
+.hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.35);
 }
 
 .hero-content {
@@ -28,20 +28,23 @@
   justify-content: center;
   align-items: flex-start;
   gap: 1rem;
-  padding: 1.5rem 1.5rem 1.5rem 2rem;
+  padding: 1.5rem 1.5rem 1.5rem 3rem;
   text-align: left;
-  max-width: 420px;
+  max-width: 520px;
 }
 
 .hero-content h1 {
-  margin: 0;
   color: #ffffff;
-  font-size: 2rem;
+  font-size: 2.1rem;
+  line-height: 1.2;
+  max-width: 520px;
 }
 
 .hero-content p {
-  max-width: 45rem;
+  max-width: 420px;
   color: #f3f3f3;
+  line-height: 1.6;
+  margin: 0.25rem 0 0.5rem;
 }
 
 .hero-buttons {
@@ -55,7 +58,7 @@
   display: inline-block;
   padding: 0.85rem 1.25rem;
   background: #d4af37;
-  color: #121212;
+  color: #111111;
   font-weight: 700;
   border-radius: 999px;
   text-align: center;
@@ -63,24 +66,33 @@
 
 .cta-button:hover {
   background: #ffffff;
-  color: #121212;
+  color: #111111;
 }
 
 .secondary-button {
   background: transparent;
   color: #ffffff;
-  border: 1px solid #ffffff;
+  border: 2px solid #ffffff;
 }
 
 .secondary-button:hover {
   background: #ffffff;
-  color: #121212;
+  color: #111111;
 }
 
-.about-section,
-.weather-section,
-.contact-preview {
+.about-section {
+  margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.about-section h2 {
+  margin-bottom: 0.75rem;
+}
+
+.about-section p {
+  line-height: 1.7;
+  max-width: 1000px;
+  margin-bottom: 0.75rem;
 }
 
 .services-preview {
@@ -91,7 +103,7 @@
 .testimonials-section h2 {
   text-align: center;
   color: #d4af37;
-  margin-bottom: 2rem 0 1rem;
+  margin-bottom: 1rem;
 }
 
 .services-preview-grid,
@@ -103,12 +115,21 @@
 .services-preview .service-card img {
   width: 100%;
   border-radius: 10px;
+  margin-bottom: 0.75rem;
 }
 
-.services-preview .service-card h3,
-.testimonial-card h3 {
+.services-preview .service-card h3 {
+  margin: 0 0 0.5rem;
   color: #d4af37;
-  margin: 1rem 0 0.5rem;
+}
+
+.services-preview .service-card p {
+  line-height: 1.5;
+}
+
+.weather-section,
+.contact-preview {
+  margin-bottom: 1rem;
 }
 
 .weather-box {
@@ -123,8 +144,12 @@
 }
 
 #current-temp {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
+}
+
+.testimonials-section h2 {
+  margin: 2rem 0 1rem;
 }
 
 .testimonial-card {
@@ -137,6 +162,11 @@
   border-radius: 50%;
   object-fit: cover;
   margin: 0 auto 1rem;
+}
+
+.testimonial-card h3 {
+  color: #d4af37;
+  margin-bottom: 0.5rem;
 }
 
 .testimonial-service {
@@ -152,4 +182,9 @@
 
 .testimonial-text {
   line-height: 1.5;
+}
+
+.contact-preview p {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
 }

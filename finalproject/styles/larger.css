@@ -1,4 +1,4 @@
-@media (min-width: 38rem) {
+@media only screen and (min-width: 38rem) {
   .hamburger {
     display: none;
   }
@@ -22,17 +22,20 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  footer {
+  .hero-buttons {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .site-footer {
     display: grid;
-    grid-template-columns: repeat(3 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
-    align-items: center;
-    text-align: center;
-   
+    align-items: start;
   }
 }
 
-@media (min-width: 64rem) {
+@media only screen and (min-width: 64rem) {
   .services-preview-grid,
   .testimonials-grid,
   .services-grid {
@@ -43,12 +46,7 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .hero-buttons {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  footer {
+  .site-footer {
     grid-template-columns: repeat(4, 1fr);
   }
 }

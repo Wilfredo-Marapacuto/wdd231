@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Thank You | WM Servicios Hispanos</title>
+  <title>WM Servicios Hispanos | Thank You</title>
   <meta name="description" content="Thank you for contacting WM Servicios Hispanos.">
   <meta name="author" content="Wilfredo Marapacuto">
 
-  <meta property="og:title" content="Thank You | WM Servicios Hispanos">
+  <meta property="og:title" content="WM Servicios Hispanos | Thank You">
   <meta property="og:description" content="Thank you for contacting WM Servicios Hispanos.">
-  <meta property="og:image" content="https://wmservicioshispanos.com/images/hero.webp">
-  <meta property="og:url" content="https://wmservicioshispanos.com/thankyou.html">
+  <meta property="og:image" content="https://wilfredo-marapacuto.github.io/wdd231/finalproject/images/logo-main.webp">
+  <meta property="og:url" content="https://wilfredo-marapacuto.github.io/wdd231/finalproject/thankyou.html">
   <meta property="og:type" content="website">
 
-  <link rel="icon" href="images/logos/logo-main.webp">
+  <link rel="icon" href="images/logo-main.webp" type="image/webp">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,17 +25,16 @@
   <link rel="stylesheet" href="styles/contact.css">
   <link rel="stylesheet" href="styles/larger.css">
 
-  <script src="scripts/contact.js" defer></script>
+  <script type="module" src="scripts/contact.js"></script>
 </head>
 <body>
-
-  <header>
-    <div class="brand">
-      <img src="images/logos/logo-main.webp" alt="WM Servicios Hispanos logo" width="120" height="96">
+  <header class="site-header">
+    <a href="index.html" class="brand">
+      <img src="images/logo-main.webp" alt="WM Servicios Hispanos logo" width="120" height="96">
       <span>WM Servicios Hispanos</span>
-    </div>
+    </a>
 
-    <button id="ham-btn" class="hamburger" aria-label="Menu"></button>
+    <button id="ham-btn" class="hamburger" aria-label="Open navigation" aria-expanded="false"></button>
   </header>
 
   <nav id="nav-bar" class="navigation">
@@ -51,12 +50,12 @@
 
     <section class="card thankyou-card">
       <h2 class="section-title">Your Message Was Received</h2>
-      <p>Thank you for contacting WM Servicios Hispanos. We will review your message and contact you as soon as possible.</p>
+      <p>Thank you for contacting WM Servicios Hispanos. We will review your message and contact you soon.</p>
       <div id="results"></div>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="footer-info">
       <p><strong>WM Servicios Hispanos</strong></p>
       <p>3651 N 100 E Suite 375, Provo, Utah 84604</p>
@@ -65,21 +64,17 @@
     </div>
 
     <div class="footer-social">
-      <a href="https://www.facebook.com" target="_blank">
-        <img src="images/icons/icon-facebook.svg" alt="Facebook icon" width="40" height="40" loading="lazy">
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+        <img src="images/icon-facebook.svg" alt="Facebook icon" width="40" height="40" loading="lazy">
       </a>
-      <a href="https://x.com" target="_blank">
-        <img src="images/icons/icon-x.svg" alt="X icon" width="40" height="40" loading="lazy">
+      <a href="https://x.com/" target="_blank" rel="noopener">
+        <img src="images/icon-x.svg" alt="X icon" width="40" height="40" loading="lazy">
       </a>
     </div>
 
     <div class="footer-links">
       <p><a href="attributions.html">Attributions</a></p>
-      <p>
-        <a href="https://www.youtube.com/watch?v=TU_VIDEO_ID" target="_blank">
-          Watch Project Video
-        </a>
-      </p>
+      <p><a href="https://www.youtube.com/" target="_blank" rel="noopener">Watch Project Video</a></p>
     </div>
 
     <div class="footer-dev">
@@ -87,6 +82,5 @@
       <p id="lastModified"></p>
     </div>
   </footer>
-
 </body>
 </html>

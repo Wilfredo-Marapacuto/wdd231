@@ -4,20 +4,26 @@ const servicesContainer = document.querySelector("#services-container");
 const modal = document.querySelector("#service-modal");
 const modalTitle = document.querySelector("#modal-title");
 const modalCategory = document.querySelector("#modal-category");
-const modalDescription = document.querySelector("#modal-description");
 const modalCompany = document.querySelector("#modal-company");
+const modalDescription = document.querySelector("#modal-description");
+const modalPrice = document.querySelector("#modal-price");
 const closeModalButton = document.querySelector("#close-modal");
 const lastService = document.querySelector("#last-service");
 const currentYear = document.querySelector("#currentyear");
 const lastModified = document.querySelector("#lastModified");
 
+// simple responsive menu
 if (hamButton && navBar) {
   hamButton.addEventListener("click", () => {
-    hamButton.classList.toggle("show");
     navBar.classList.toggle("show");
+    hamButton.classList.toggle("show");
+
+    const expanded = hamButton.classList.contains("show");
+    hamButton.setAttribute("aria-expanded", expanded);
   });
 }
 
+// footer dates
 if (currentYear) {
   currentYear.textContent = new Date().getFullYear();
 }
@@ -26,41 +32,55 @@ if (lastModified) {
   lastModified.textContent = `Last Modified: ${document.lastModified}`;
 }
 
-async function loadServices() {
-  try {
-    const response = await fetch("data/services.json");
+// show last service from localStorage
+function displayLastService() {
+  const savedService = localStorage.getItem("lastServiceViewed");
 
-    if (!response.ok) {
-      throw new Error("Services data was not loaded.");
+  if (lastService) {
+    if (savedService) {
+      lastService.textContent = savedService;
+    } else {
+      lastService.textContent = "No service viewed yet.";
     }
-
-    const services = await response.json();
-
-    displayServices(services);
-    showLastService();
-  } catch (error) {
-    console.error(error);
-    servicesContainer.innerHTML = "<p>Sorry, services are not available right now.</p>";
   }
 }
 
+// open modal with service details
+function openModal(service) {
+  if (!modal) return;
+
+  modalTitle.textContent = service.name;
+  modalCategory.textContent = `Category: ${service.category}`;
+  modalCompany.textContent = `Company: ${service.company}`;
+  modalDescription.textContent = service.details;
+  modalPrice.textContent = `Price Note: ${service.priceNote}`;
+
+  localStorage.setItem("lastServiceViewed", service.name);
+  displayLastService();
+
+  modal.showModal();
+}
+
+// build service cards
 function displayServices(services) {
-  const servicesHTML = services.map((service) => {
+  if (!servicesContainer) return;
+
+  const cards = services.map((service) => {
     return `
       <article class="service-card">
         <h2>${service.name}</h2>
         <p><strong>Category:</strong> ${service.category}</p>
         <p><strong>Company:</strong> ${service.company}</p>
         <p>${service.description}</p>
-        <p><strong>Price:</strong> ${service.priceNote}</p>
-        <button class="learn-more" data-id="${service.id}">Learn More</button>
+        <p><strong>Featured:</strong> ${service.featured ? "Yes" : "No"}</p>
+        <button type="button" class="learn-more-btn" data-id="${service.id}">Learn More</button>
       </article>
     `;
   }).join("");
 
-  servicesContainer.innerHTML = servicesHTML;
+  servicesContainer.innerHTML = cards;
 
-  const buttons = document.querySelectorAll(".learn-more");
+  const buttons = document.querySelectorAll(".learn-more-btn");
 
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -74,45 +94,42 @@ function displayServices(services) {
   });
 }
 
-function openModal(service) {
-  modalTitle.textContent = service.name;
-  modalCategory.textContent = `Category: ${service.category}`;
-  modalDescription.textContent = service.details;
-  modalCompany.textContent = `Company: ${service.company} | Price: ${service.priceNote}`;
+// fetch local JSON
+async function getServices() {
+  try {
+    const response = await fetch("data/services.json");
 
-  localStorage.setItem("lastServiceViewed", service.name);
+    if (!response.ok) {
+      throw new Error("Services data could not be loaded.");
+    }
 
-  if (modal) {
-    modal.showModal();
-  }
+    const data = await response.json();
+    displayServices(data);
+  } catch (error) {
+    console.error(error);
 
-  showLastService();
-}
-
-function showLastService() {
-  const savedService = localStorage.getItem("lastServiceViewed");
-
-  if (savedService) {
-    lastService.textContent = savedService;
-  } else {
-    lastService.textContent = "No service viewed yet.";
+    if (servicesContainer) {
+      servicesContainer.innerHTML = "<p>Services are not available right now.</p>";
+    }
   }
 }
 
-if (closeModalButton) {
+// close modal button
+if (closeModalButton && modal) {
   closeModalButton.addEventListener("click", () => {
     modal.close();
   });
 }
 
+// close modal when clicking outside
 if (modal) {
   modal.addEventListener("click", (event) => {
-    const dialogBox = modal.getBoundingClientRect();
+    const rect = modal.getBoundingClientRect();
     const clickedInside =
-      event.clientX >= dialogBox.left &&
-      event.clientX <= dialogBox.right &&
-      event.clientY >= dialogBox.top &&
-      event.clientY <= dialogBox.bottom;
+      event.clientX >= rect.left &&
+      event.clientX <= rect.right &&
+      event.clientY >= rect.top &&
+      event.clientY <= rect.bottom;
 
     if (!clickedInside) {
       modal.close();
@@ -120,4 +137,5 @@ if (modal) {
   });
 }
 
-loadServices();
+displayLastService();
+getServices();

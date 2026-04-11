@@ -4,16 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Services | WM Servicios Hispanos</title>
-  <meta name="description" content="Explore our immigration, tax, and insurance services at WM Servicios Hispanos.">
+  <title>WM Servicios Hispanos | Services</title>
+  <meta name="description" content="Explore immigration, tax, and insurance services offered by WM Servicios Hispanos.">
   <meta name="author" content="Wilfredo Marapacuto">
 
-  <meta property="og:title" content="WM Servicios Hispanos Services">
-  <meta property="og:description" content="Immigration, tax, and insurance services for the Hispanic community.">
-  <meta property="og:image" content="https://wmservicioshispanos.com/images/hero.webp">
-  <meta property="og:url" content="https://wmservicioshispanos.com/services.html">
+  <meta property="og:title" content="WM Servicios Hispanos | Services">
+  <meta property="og:description" content="Explore immigration, tax, and insurance services offered by WM Servicios Hispanos.">
+  <meta property="og:image" content="https://wilfredo-marapacuto.github.io/wdd231/finalproject/images/service-immigration.webp">
+  <meta property="og:url" content="https://wilfredo-marapacuto.github.io/wdd231/finalproject/services.html">
+  <meta property="og:type" content="website">
 
-  <link rel="icon" href="images/logo-main.webp">
+  <link rel="icon" href="images/logo-main.webp" type="image/webp">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,18 +25,16 @@
   <link rel="stylesheet" href="styles/services.css">
   <link rel="stylesheet" href="styles/larger.css">
 
-  <!-- using module for ES modules requirement -->
   <script type="module" src="scripts/services.js"></script>
 </head>
 <body>
-
-  <header>
-    <div class="brand">
-      <img src="images/logo-main.webp" alt="Logo" width="120">
+  <header class="site-header">
+    <a href="index.html" class="brand">
+      <img src="images/logo-main.webp" alt="WM Servicios Hispanos logo" width="120" height="96">
       <span>WM Servicios Hispanos</span>
-    </div>
+    </a>
 
-    <button id="ham-btn" class="hamburger" aria-label="Menu"></button>
+    <button id="ham-btn" class="hamburger" aria-label="Open navigation" aria-expanded="false"></button>
   </header>
 
   <nav id="nav-bar" class="navigation">
@@ -49,65 +48,56 @@
   <main>
     <h1>Our Services</h1>
 
-    <!-- simple intro -->
-    <section class="card">
+    <section class="card services-intro">
       <p>
-        Here you can explore all the services we offer in immigration, tax, and insurance.
-        Click on any service to learn more details.
+        This page shows our immigration, tax, and insurance services. Click the button on any card to
+        open more details. The last service you view will be saved in local storage.
       </p>
     </section>
 
-    <!-- container where JS will load the 15 services -->
-    <section id="services-container" class="services-grid"></section>
-
-    <!-- modal (required by rubric) -->
-    <dialog id="service-modal">
-      <h2 id="modal-title"></h2>
-      <p id="modal-category"></p>
-      <p id="modal-description"></p>
-      <p id="modal-company"></p>
-      <button id="close-modal">Close</button>
-    </dialog>
-
-    <!-- last viewed service (localStorage requirement) -->
-    <section class="card">
-      <h2>Last Service Viewed</h2>
+    <section class="card last-service-card">
+      <h2 class="section-title">Last Service Viewed</h2>
       <p id="last-service">No service viewed yet.</p>
     </section>
 
+    <section id="services-container" class="services-grid"></section>
+
+    <dialog id="service-modal">
+      <h2 id="modal-title"></h2>
+      <p id="modal-category"></p>
+      <p id="modal-company"></p>
+      <p id="modal-description"></p>
+      <p id="modal-price"></p>
+      <button id="close-modal">Close</button>
+    </dialog>
   </main>
 
-  <footer>
-    <div>
+  <footer class="site-footer">
+    <div class="footer-info">
       <p><strong>WM Servicios Hispanos</strong></p>
       <p>3651 N 100 E Suite 375, Provo, Utah 84604</p>
       <p>(385) 416-8236</p>
       <p>contacto@wmservicioshispanos.com</p>
     </div>
 
-    <div>
-      <a href="https://www.facebook.com" target="_blank">
-        <img src="images/icon-facebook.svg" alt="Facebook" width="40">
+    <div class="footer-social">
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+        <img src="images/icon-facebook.svg" alt="Facebook icon" width="40" height="40" loading="lazy">
       </a>
-      <a href="https://x.com" target="_blank">
-        <img src="images/icon-x.svg" alt="X" width="40">
+      <a href="https://x.com/" target="_blank" rel="noopener">
+        <img src="images/icon-x.svg" alt="X icon" width="40" height="40" loading="lazy">
       </a>
     </div>
 
-    <div>
+    <div class="footer-links">
       <p><a href="attributions.html">Attributions</a></p>
-      <p>
-        <a href="https://www.youtube.com/watch?v=YOUR_VIDEO" target="_blank">
-          Watch Project Video
-        </a>
-      </p>
+      <p><a href="https://www.youtube.com/" target="_blank" rel="noopener">Watch Project Video</a></p>
     </div>
 
-    <div>
+    <div class="footer-dev">
       <p>Wilfredo Marapacuto | WDD 231 | © <span id="currentyear"></span></p>
       <p id="lastModified"></p>
     </div>
   </footer>
-
 </body>
 </html>

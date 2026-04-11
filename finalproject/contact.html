@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Contact | WM Servicios Hispanos</title>
+  <title>WM Servicios Hispanos | Contact</title>
   <meta name="description" content="Contact WM Servicios Hispanos for immigration, tax, and insurance services in the United States.">
   <meta name="author" content="Wilfredo Marapacuto">
 
-  <meta property="og:title" content="Contact | WM Servicios Hispanos">
-  <meta property="og:description" content="Contact WM Servicios Hispanos for immigration, tax, and insurance services.">
-  <meta property="og:image" content="https://wmservicioshispanos.com/images/hero.webp">
-  <meta property="og:url" content="https://wmservicioshispanos.com/contact.html">
+  <meta property="og:title" content="WM Servicios Hispanos | Contact">
+  <meta property="og:description" content="Contact WM Servicios Hispanos for immigration, tax, and insurance services in the United States.">
+  <meta property="og:image" content="https://wilfredo-marapacuto.github.io/wdd231/finalproject/images/logo-main.webp">
+  <meta property="og:url" content="https://wilfredo-marapacuto.github.io/wdd231/finalproject/contact.html">
   <meta property="og:type" content="website">
 
-  <link rel="icon" href="images/logos/logo-main.webp">
+  <link rel="icon" href="images/logo-main.webp" type="image/webp">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,17 +25,16 @@
   <link rel="stylesheet" href="styles/contact.css">
   <link rel="stylesheet" href="styles/larger.css">
 
-  <script src="scripts/contact.js" defer></script>
+  <script type="module" src="scripts/contact.js"></script>
 </head>
 <body>
-
-  <header>
-    <div class="brand">
-      <img src="images/logos/logo-main.webp" alt="WM Servicios Hispanos logo" width="120" height="96">
+  <header class="site-header">
+    <a href="index.html" class="brand">
+      <img src="images/logo-main.webp" alt="WM Servicios Hispanos logo" width="120" height="96">
       <span>WM Servicios Hispanos</span>
-    </div>
+    </a>
 
-    <button id="ham-btn" class="hamburger" aria-label="Menu"></button>
+    <button id="ham-btn" class="hamburger" aria-label="Open navigation" aria-expanded="false"></button>
   </header>
 
   <nav id="nav-bar" class="navigation">
@@ -49,27 +48,16 @@
   <main>
     <h1>Contact Us</h1>
 
-    <section class="card">
-      <h2 class="section-title">Get in Touch</h2>
-      <p>
-        We are here to help you with immigration, tax, and insurance services.
-        If you have questions, you can contact us directly or send us a message through the form below.
-      </p>
-    </section>
-
     <section class="contact-layout">
       <section class="card contact-info">
         <h2 class="section-title">Office Information</h2>
         <p><strong>Address:</strong> 3651 N 100 E Suite 375, Provo, Utah 84604</p>
         <p><strong>Phone:</strong> (385) 416-8236</p>
         <p><strong>Email:</strong> contacto@wmservicioshispanos.com</p>
-        <p><strong>Hours:</strong> Monday to Friday, 9:00 AM to 6:00 PM</p>
+        <p><strong>Business Hours:</strong> Monday to Friday, 9:00 AM to 6:00 PM</p>
         <p>
           We offer assistance in immigration processes and, in selected cases for humanitarian reasons,
           we provide PRO BONO (free of cost) services to individuals and families in vulnerable situations.
-        </p>
-        <p>
-          We also work hand in hand with American Pathway Foundation to support our community with care and responsibility.
         </p>
       </section>
 
@@ -77,17 +65,17 @@
         <h2 class="section-title">Send a Message</h2>
 
         <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="name" autocomplete="name" required>
 
         <label for="phone">Phone</label>
-        <input type="tel" id="phone" name="phone" required>
+        <input type="tel" id="phone" name="phone" autocomplete="tel" required>
 
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" autocomplete="email" required>
 
         <label for="service">Service</label>
         <select id="service" name="service" required>
-          <option value="">Select a service</option>
+          <option value="">Select one</option>
           <option value="Immigration">Immigration</option>
           <option value="Tax Services">Tax Services</option>
           <option value="Insurance">Insurance</option>
@@ -103,7 +91,7 @@
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="footer-info">
       <p><strong>WM Servicios Hispanos</strong></p>
       <p>3651 N 100 E Suite 375, Provo, Utah 84604</p>
@@ -112,21 +100,17 @@
     </div>
 
     <div class="footer-social">
-      <a href="https://www.facebook.com" target="_blank">
-        <img src="images/icons/icon-facebook.svg" alt="Facebook icon" width="40" height="40" loading="lazy">
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+        <img src="images/icon-facebook.svg" alt="Facebook icon" width="40" height="40" loading="lazy">
       </a>
-      <a href="https://x.com" target="_blank">
-        <img src="images/icons/icon-x.svg" alt="X icon" width="40" height="40" loading="lazy">
+      <a href="https://x.com/" target="_blank" rel="noopener">
+        <img src="images/icon-x.svg" alt="X icon" width="40" height="40" loading="lazy">
       </a>
     </div>
 
     <div class="footer-links">
       <p><a href="attributions.html">Attributions</a></p>
-      <p>
-        <a href="https://www.youtube.com/watch?v=YOUR_VIDEO" target="_blank">
-          Watch Project Video
-        </a>
-      </p>
+      <p><a href="https://www.youtube.com/" target="_blank" rel="noopener">Watch Project Video</a></p>
     </div>
 
     <div class="footer-dev">
@@ -134,6 +118,5 @@
       <p id="lastModified"></p>
     </div>
   </footer>
-
 </body>
 </html>

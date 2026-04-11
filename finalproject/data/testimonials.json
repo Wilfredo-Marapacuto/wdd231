@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Herrera Family",
+    "service": "Tax Services",
+    "image": "images/testimonials/testimonial-1.webp",
+    "rating": 5,
+    "text": "We were very worried after the IRS told us we did not qualify for tax credits for our daughters. WM Servicios Hispanos reviewed our case, helped us submit a dispute, and everything changed. In the end, we received a refund of $11,345. We are extremely grateful for their help and professionalism."
+  },
+  {
+    "id": 2,
+    "name": "Luis Contreras",
+    "service": "Tax Services",
+    "image": "images/testimonials/testimonial-2.webp",
+    "rating": 5,
+    "text": "I did not know if I was going to receive anything this year, but thanks to WM Servicios Hispanos I got a refund of $1,826 from the IRS. They explained everything clearly and made the process simple for me. I highly recommend their services."
+  },
+  {
+    "id": 3,
+    "name": "Jesús Hernández",
+    "service": "Immigration",
+    "image": "images/testimonials/testimonial-3.webp",
+    "rating": 5,
+    "text": "After a long process, I finally received my work permit and Social Security. Now I have better opportunities and can work legally in the United States. WM Servicios Hispanos guided me step by step and gave me confidence throughout the process."
+  },
+  {
+    "id": 4,
+    "name": "Maira Parra",
+    "service": "Immigration",
+    "image": "images/testimonials/testimonial-4.webp",
+    "rating": 5,
+    "text": "I had to leave my country because of political persecution and arrived in the United States with uncertainty. With the help of WM Servicios Hispanos, I was able to obtain my work permit and Social Security. Today I feel safer and more stable thanks to their support."
+  },
+  {
+    "id": 5,
+    "name": "Mirla Cumaná",
+    "service": "Insurance",
+    "image": "images/testimonials/testimonial-5.webp",
+    "rating": 5,
+    "text": "After a car accident, I lost my vehicle and felt overwhelmed. Thankfully, my insurance worked exactly as it should. With the guidance I received, I was able to get a replacement vehicle and move forward. I am very thankful for the support and clear explanations I received."
+  },
+  {
+    "id": 6,
+    "name": "Ricardo Rico",
+    "service": "Insurance",
+    "image": "images/testimonials/testimonial-6.webp",
+    "rating": 5,
+    "text": "I had an emergency surgery that could have cost me more than $40,000. Thanks to my health insurance, I was able to receive the treatment I needed without facing that financial burden. I truly understand now how important it is to have the right coverage."
+  }
+]

@@ -1,0 +1,155 @@
+.hero {
+  position: relative;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: center 10%;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem 1.5rem 1.5rem 2rem;
+  text-align: left;
+  max-width: 420px;
+}
+
+.hero-content h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+.hero-content p {
+  max-width: 45rem;
+  color: #f3f3f3;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.85rem 1.25rem;
+  background: #d4af37;
+  color: #121212;
+  font-weight: 700;
+  border-radius: 999px;
+  text-align: center;
+}
+
+.cta-button:hover {
+  background: #ffffff;
+  color: #121212;
+}
+
+.secondary-button {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.secondary-button:hover {
+  background: #ffffff;
+  color: #121212;
+}
+
+.about-section,
+.weather-section,
+.contact-preview {
+  margin-bottom: 1rem;
+}
+
+.services-preview {
+  margin: 2rem 0;
+}
+
+.services-preview h2,
+.testimonials-section h2 {
+  text-align: center;
+  color: #d4af37;
+  margin-bottom: 2rem 0 1rem;
+}
+
+.services-preview-grid,
+.testimonials-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.services-preview .service-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.services-preview .service-card h3,
+.testimonial-card h3 {
+  color: #d4af37;
+  margin: 1rem 0 0.5rem;
+}
+
+.weather-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.weather-box img {
+  width: 80px;
+  height: 80px;
+}
+
+#current-temp {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.testimonial-card {
+  text-align: center;
+}
+
+.testimonial-card img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+}
+
+.testimonial-service {
+  color: #d4af37;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.testimonial-stars {
+  color: #f5c542;
+  margin: 0.5rem 0;
+}
+
+.testimonial-text {
+  line-height: 1.5;
+}

@@ -1,0 +1,58 @@
+.services-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+
+.services-grid .service-card h2 {
+  color: #d4af37;
+  margin-top: 0;
+}
+
+.services-grid .service-card p {
+  margin: 0.5rem 0;
+}
+
+.services-grid .service-card button {
+  margin-top: 0.75rem;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #d4af37;
+  color: #121212;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.services-grid .service-card button:hover {
+  background: #ffffff;
+}
+
+#last-service {
+  font-weight: 700;
+}
+
+dialog {
+  width: 90%;
+  max-width: 500px;
+  border: 1px solid #2d2d2d;
+  border-radius: 12px;
+  padding: 1.5rem;
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+#close-modal {
+  margin-top: 1rem;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #d4af37;
+  color: #121212;
+  font-weight: 700;
+  cursor: pointer;
+}

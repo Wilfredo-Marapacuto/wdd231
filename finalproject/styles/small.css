@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+  color: #ffffff;
+  background: #121212;
+}
+
+header,
+nav,
+main,
+footer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  display: grid;
+  grid-template-columns: auto 44px;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #2d2d2d;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand img {
+  width: 120px;
+  height: auto;
+}
+
+.brand span {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #d4af37;
+}
+
+.hamburger {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.hamburger::before {
+  content: "☰";
+}
+
+.hamburger.show::before {
+  content: "✖";
+}
+
+.navigation {
+  display: none;
+}
+
+.navigation.show {
+  display: block;
+}
+
+.navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation a {
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  color: #ffffff;
+  border-bottom: 1px solid #2d2d2d;
+}
+
+.navigation a:hover {
+  background: #d4af37;
+  color: #121212;
+}
+
+.current a {
+  background: #d4af37;
+  color: #121212;
+  font-weight: 700;
+}
+
+main {
+  padding: 1rem;
+}
+
+main > h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.card,
+.contact-form,
+.contact-info,
+.thankyou-card,
+.service-card,
+.testimonial-card {
+  background: #1a1a1a;
+  border: 1px solid #2d2d2d;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.section-title {
+  color: #d4af37;
+  margin-bottom: 1rem;
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 1.5rem 1rem;
+  background: #0f0f0f;
+  border-top: 1px solid #2d2d2d;
+  text-align: center;
+}
+
+.footer-info,
+.footer-social,
+.footer-links,
+.footer-dev {
+  margin-bottom: 1rem;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin: 0 0.35rem;
+}
+
+.footer-social img {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-links a,
+.footer-dev a {
+  color: #d4af37;
+}
+
+.footer-links a:hover,
+.footer-dev a:hover {
+  color: #ffffff;
+}

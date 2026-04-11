@@ -1,0 +1,54 @@
+@media (min-width: 38rem) {
+  .hamburger {
+    display: none;
+  }
+
+  .navigation {
+    display: block;
+  }
+
+  .navigation ul {
+    display: flex;
+  }
+
+  .navigation li {
+    flex: 1;
+  }
+
+  .services-preview-grid,
+  .testimonials-grid,
+  .services-grid,
+  .contact-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: repeat(3 1fr);
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+   
+  }
+}
+
+@media (min-width: 64rem) {
+  .services-preview-grid,
+  .testimonials-grid,
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  footer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

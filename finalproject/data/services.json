@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "name": "Affirmative and Defensive Asylum",
+    "category": "Immigration",
+    "company": "WM Inmigración LLC",
+    "description": "Assistance with affirmative and defensive asylum cases.",
+    "details": "We help clients organize their documents, prepare forms, and understand each step of the asylum process.",
+    "priceNote": "Consultation required",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "name": "Adjustment of Status",
+    "category": "Immigration",
+    "company": "WM Inmigración LLC",
+    "description": "Help with adjustment of status applications.",
+    "details": "We assist clients who may qualify to become lawful permanent residents from inside the United States.",
+    "priceNote": "Consultation required",
+    "featured": true
+  },
+  {
+    "id": 3,
+    "name": "Naturalization",
+    "category": "Immigration",
+    "company": "WM Inmigración LLC",
+    "description": "Support with U.S. citizenship applications.",
+    "details": "We help clients prepare their naturalization package and review the general requirements before filing.",
+    "priceNote": "Consultation required",
+    "featured": false
+  },
+  {
+    "id": 4,
+    "name": "U Visa and T Visa Assistance",
+    "category": "Immigration",
+    "company": "WM Inmigración LLC",
+    "description": "Assistance for victims who may qualify for humanitarian visa options.",
+    "details": "We guide clients through document preparation and general case organization for U Visa and T Visa processes.",
+    "priceNote": "Consultation required",
+    "featured": false
+  },
+  {
+    "id": 5,
+    "name": "VAWA Petitions",
+    "category": "Immigration",
+    "company": "WM Inmigración LLC",
+    "description": "Help with VAWA-based immigration cases.",
+    "details": "We assist with organizing forms and evidence for clients who may qualify under the Violence Against Women Act.",
+    "priceNote": "Consultation required",
+    "featured": true
+  },
+  {
+    "id": 6,
+    "name": "Individual Tax Preparation",
+    "category": "Tax Services",
+    "company": "WM Servicios Tributarios LLC",
+    "description": "Preparation of personal federal and state tax returns.",
+    "details": "We help individuals and families prepare tax returns accurately and on time based on their documents.",
+    "priceNote": "Price varies by case",
+    "featured": true
+  },
+  {
+    "id": 7,
+    "name": "Business Tax Preparation",
+    "category": "Tax Services",
+    "company": "WM Servicios Tributarios LLC",
+    "description": "Preparation of business tax returns for companies and self-employed clients.",
+    "details": "We assist business owners with tax filing, review of records, and preparation of business returns.",
+    "priceNote": "Price varies by case",
+    "featured": true
+  },
+  {
+    "id": 8,
+    "name": "IRS Dispute and Resolution Services",
+    "category": "Tax Services",
+    "company": "WM Servicios Tributarios LLC",
+    "description": "Support with IRS letters, notices, and disputes.",
+    "details": "We review IRS notices, prepare responses, and help clients organize documents for tax disputes and corrections.",
+    "priceNote": "Consultation required",
+    "featured": true
+  },
+  {
+    "id": 9,
+    "name": "Business Formation",
+    "category": "Tax Services",
+    "company": "WM Servicios Tributarios LLC",
+    "description": "Help with new business setup and LLC formation.",
+    "details": "We assist clients with basic business formation steps, including LLC registration support and EIN guidance.",
+    "priceNote": "Price varies by service",
+    "featured": false
+  },
+  {
+    "id": 10,
+    "name": "Credit Building and Repair Services",
+    "category": "Tax Services",
+    "company": "WM Servicios Tributarios LLC",
+    "description": "Support for personal and business credit improvement.",
+    "details": "We help clients understand credit reports, dispute inaccurate items, and build stronger credit habits.",
+    "priceNote": "Consultation required",
+    "featured": false
+  },
+  {
+    "id": 11,
+    "name": "Health Insurance Enrollment",
+    "category": "Insurance",
+    "company": "WM Seguros Integrales LLC",
+    "description": "Help with health insurance enrollment options.",
+    "details": "We guide clients through available health coverage options and help them complete enrollment applications.",
+    "priceNote": "No-cost consultation",
+    "featured": true
+  },
+  {
+    "id": 12,
+    "name": "Life Insurance Planning",
+    "category": "Insurance",
+    "company": "WM Seguros Integrales LLC",
+    "description": "Guidance for selecting life insurance coverage.",
+    "details": "We help families understand life insurance options and choose coverage that fits their needs and goals.",
+    "priceNote": "No-cost consultation",
+    "featured": true
+  },
+  {
+    "id": 13,
+    "name": "Auto Insurance Coverage",
+    "category": "Insurance",
+    "company": "WM Seguros Integrales LLC",
+    "description": "Assistance with auto insurance options and coverage review.",
+    "details": "We help clients compare coverage options and understand deductibles, limits, and policy benefits.",
+    "priceNote": "No-cost consultation",
+    "featured": false
+  },
+  {
+    "id": 14,
+    "name": "ACA Marketplace Assistance",
+    "category": "Insurance",
+    "company": "WM Seguros Integrales LLC",
+    "description": "Support with Affordable Care Act Marketplace plans.",
+    "details": "We help clients review ACA Marketplace options, subsidies, and enrollment deadlines.",
+    "priceNote": "No-cost consultation",
+    "featured": true
+  },
+  {
+    "id": 15,
+    "name": "Supplemental Insurance Plans",
+    "category": "Insurance",
+    "company": "WM Seguros Integrales LLC",
+    "description": "Information about dental, vision, and other supplemental plans.",
+    "details": "We help clients review additional insurance options that can strengthen their main coverage.",
+    "priceNote": "No-cost consultation",
+    "featured": false
+  }
+]

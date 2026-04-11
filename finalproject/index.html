@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>WM Servicios Hispanos | Home</title>
+  <meta name="description" content="WM Servicios Hispanos provides immigration, tax, and insurance services for the Hispanic community in the United States.">
+  <meta name="author" content="Wilfredo Marapacuto">
+
+  <meta property="og:title" content="WM Servicios Hispanos">
+  <meta property="og:description" content="Immigration, tax, and insurance services for the Hispanic community in the United States.">
+  <meta property="og:image" content="https://wmservicioshispanos.com/images/hero.webp">
+  <meta property="og:url" content="https://wmservicioshispanos.com/">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="images/logos/logo-main.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <img src="images/logos/logo-main.webp" alt="WM Servicios Hispanos logo" width="120" height="96">
+      <div>
+        <span>WM Servicios Hispanos</span>
+      </div>
+    </div>
+
+    <button id="ham-btn" class="hamburger" aria-label="Menu"></button>
+  </header>
+
+  <nav id="nav-bar" class="navigation">
+    <ul>
+      <li class="current"><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Main hero section -->
+    <section class="hero">
+      <img src="images/hero.webp" alt="Happy family representing the American dream" width="1920" height="800">
+      <div class="hero-content">
+        <h1>We are your best ally on the Pathway to the American dream</h1>
+        <p>Immigration, tax, and insurance services.</p>
+        <div class="hero-buttons">
+          <a class="cta-button" href="contact.html">Contact Us</a>
+          <a class="cta-button secondary-button" href="services.html">View Services</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About section -->
+    <section class="card about-section">
+      <h2 class="section-title">About Us</h2>
+      <p>
+        At WM Servicios Hispanos, we provide complete support in immigration, tax, and insurance services.
+        We help individuals, families, and business owners who need clear guidance and trustworthy service.
+        Our goal is to help our community find stability, protection, and better opportunities in the United States.
+      </p>
+      <p>
+        We also take selected immigration cases PRO BONO (free of cost) for humanitarian reasons.
+        In addition, we work hand in hand with American Pathway Foundation to support families in vulnerable situations.
+      </p>
+    </section>
+
+    <!-- Main areas of service -->
+    <section class="services-preview">
+      <h2>Our Main Service Areas</h2>
+
+      <div class="services-preview-grid">
+        <article class="service-card">
+          <img src="images/services/service-immigration.webp" alt="Immigration service" width="600" height="400" loading="lazy">
+          <h3>Immigration</h3>
+          <p>Assistance with asylum, adjustment of status, citizenship, U visas, T visas, and VAWA cases.</p>
+        </article>
+
+        <article class="service-card">
+          <img src="images/services/service-tax.webp" alt="Tax service" width="600" height="400" loading="lazy">
+          <h3>Tax Services</h3>
+          <p>Support with personal taxes, business taxes, IRS disputes, business formation, and credit solutions.</p>
+        </article>
+
+        <article class="service-card">
+          <img src="images/services/service-insurance.webp" alt="Insurance service" width="600" height="400" loading="lazy">
+          <h3>Insurance</h3>
+          <p>Help with health, life, auto, Obamacare, and supplemental insurance plans for individuals and families.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Weather section -->
+    <section class="card weather-section">
+      <h2 class="section-title">Current Weather in Provo</h2>
+      <div class="weather-box">
+        <img id="weather-icon" src="images/weather-placeholder.webp" alt="Weather icon" width="80" height="80">
+        <div>
+          <p id="current-temp"></p>
+          <p id="weather-desc"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials section -->
+    <section class="testimonials-section">
+      <h2>Client Testimonials</h2>
+      <div id="testimonials" class="testimonials-grid"></div>
+    </section>
+
+    <!-- Small contact section -->
+    <section class="card contact-preview">
+      <h2 class="section-title">Contact Information</h2>
+      <p><strong>Address:</strong> 3651 N 100 E Suite 375, Provo, Utah 84604</p>
+      <p><strong>Phone:</strong> (385) 416-8236</p>
+      <p><strong>Email:</strong> contacto@wmservicioshispanos.com</p>
+      <p><strong>Business Hours:</strong> Monday to Friday, 9:00 AM to 6:00 PM</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-info">
+      <p><strong>WM Servicios Hispanos</strong></p>
+      <p>3651 N 100 E Suite 375, Provo, Utah 84604</p>
+      <p>(385) 416-8236</p>
+      <p>contacto@wmservicioshispanos.com</p>
+    </div>
+
+    <div class="footer-social">
+      <a href="#" aria-label="Facebook">
+        <img src="images/icon-facebook.svg" alt="Facebook icon" width="40" height="40" loading="lazy">
+      </a>
+      <a href="#" aria-label="X">
+        <img src="images/icon-x.svg" alt="X icon" width="40" height="40" loading="lazy">
+      </a>
+    </div>
+
+    <div class="footer-links">
+      <p><a href="attributions.html">Attributions</a></p>
+      <p>
+  <a href="https://www.youtube.com/watch?v=YOUR_VIDEO" target="_blank">
+    Watch Project Video
+  </a>
+</p>
+    </div>
+
+    <div class="footer-dev">
+      <p>Wilfredo Marapacuto | WDD 231 | © <span id="currentyear"></span></p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+
+</body>
+</html>

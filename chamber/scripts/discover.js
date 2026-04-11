@@ -38,9 +38,9 @@ function displayVisitMessage() {
 function displayCards() {
   cardsContainer.innerHTML = "";
 
-  places.forEach((place, index) => {
+  places.forEach((place) => {
     const card = document.createElement("article");
-    card.classList.add("discover-card", `area${index + 1}`);
+    card.classList.add("discover-card");
 
     const title = document.createElement("h2");
     title.textContent = place.name;

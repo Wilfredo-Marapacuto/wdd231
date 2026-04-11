@@ -9,7 +9,7 @@ const weatherIcon = document.querySelector("#weather-icon");
 
 const testimonialsContainer = document.querySelector("#testimonials");
 
-// OpenWeatherMap API
+//  My API key
 const apiKey = "a6d43ff69ad066b14fb2f04047830d42";
 const lat = 40.2338;
 const lon = -111.6585;
@@ -35,12 +35,10 @@ if (lastModified) {
   lastModified.textContent = `Last Modified: ${document.lastModified}`;
 }
 
-// make weather words look nicer
 function capitalizeWords(text) {
   return text.replace(/\b\w/g, (letter) => letter.toUpperCase());
 }
 
-// show weather data
 function displayWeather(data) {
   if (!currentTemp || !weatherDesc || !weatherIcon) return;
 
